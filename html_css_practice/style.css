@@ -1,10 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Helvetica, sans-serif;
 }
 .page-title {
   font-weight: bold;
-  font-family: Verdana, sans-serif;
   color: rgb(53, 84, 144);
   text-align: center;
   margin-top: 50px;
@@ -17,11 +17,42 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: rgb(59, 89, 153);
+  height: 40px;
+  color: white;
 }
 li {
   float: left;
+  color: inherit;
 }
-/* div */
+li button {
+  border: none;
+  border-radius: 10px;
+}
+li button:hover {
+  background-color: rgb(50, 80, 140);
+}
+.btnHome {
+  background-color: inherit;
+  color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0px 10px 0px 110px;
+}
+.search-bar {
+  margin: 4px;
+  height: 30px;
+  width: 500px;
+}
+.btnLogin {
+  background-color: inherit;
+  color: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 80px;
+  padding: 10px;
+}
+/* sign up content */
 .container {
   margin: auto;
   padding-top: 4px;
@@ -29,23 +60,29 @@ li {
   width: 440px;
   height: 100%;
   border-radius: 20px ;
-  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-family: Helvetica, sans-serif;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .content {
-  margin: auto;
   padding-top: 20px;
   padding-left: 50px;
-  line-height: 30px;
   font-size: 16px
+}
+input {
+  font-size: 16px;
+  height:40px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 20px;
 }
 .btn-container {
   width: 100%;
-  padding-top:10px;
+  padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
 }
-/* button */
 .btnSignup {
   background-color: rgb(59, 89, 153);
   color: white;
@@ -56,34 +93,9 @@ li {
   height: 50px;
   font-size:18px;
 }
-.btnHome {
-  background-color: inherit;
-  color: white;
-  border: none;
-  font-size:18px;
-  font-weight: bold;
-  padding: 0px 0px 0px 120px;
-  height: 40px;
+.btnSignup:hover {
+  background-color: rgb(50, 80, 140);
 }
-.btnLogin {
-  background-color: inherit;
-  color: white;
-  border: none;
-  font-size: 14px;
-  font-weight: bold;
-  padding-right: 50px;
-  height: 40px;
-}
-/* input */
-input {
-  height:40px;
-  width: 300px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  padding-left: 10px;
-}
-.search-bar {
-  margin: 4px;
-  height: 30px;
-  width: 500px;
+.btnSignup:active {
+  background-color: rgb(59, 89, 153);
 }

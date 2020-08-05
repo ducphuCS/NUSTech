@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.page-title {
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  color: rgb(53, 84, 144);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+}
+/* navigation bar */
+.nav-bar {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(59, 89, 153);
+}
+li {
+  float: left;
+}
+/* div */
+.container {
+  margin: auto;
+  padding-top: 4px;
+  background-color: rgb(249, 249, 249);
+  width: 440px;
+  height: 100%;
+  border-radius: 20px ;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: Helvetica, sans-serif;
+}
+.content {
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 50px;
+  line-height: 30px;
+  font-size: 16px
+}
+.btn-container {
+  width: 100%;
+  padding-top:10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+/* button */
+.btnSignup {
+  background-color: rgb(59, 89, 153);
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  font-size:18px;
+}
+.btnHome {
+  background-color: inherit;
+  color: white;
+  border: none;
+  font-size:18px;
+  font-weight: bold;
+  padding: 0px 0px 0px 120px;
+  height: 40px;
+}
+.btnLogin {
+  background-color: inherit;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 50px;
+  height: 40px;
+}
+/* input */
+input {
+  height:40px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding-left: 10px;
+}
+.search-bar {
+  margin: 4px;
+  height: 30px;
+  width: 500px;
+}

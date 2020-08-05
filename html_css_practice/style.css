@@ -7,7 +7,7 @@ body {
   font-weight: bold;
   color: rgb(53, 84, 144);
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
   font-size: 36px;
 }
 /* navigation bar */
@@ -57,7 +57,7 @@ li button:hover {
   margin: auto;
   padding-top: 4px;
   background-color: rgb(249, 249, 249);
-  width: 440px;
+  width: 460px;
   height: 100%;
   border-radius: 20px ;
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -67,15 +67,28 @@ li button:hover {
   padding-left: 50px;
   font-size: 16px
 }
-input {
-  font-size: 16px;
+.input-text {
+  font-size: inherit;
   height:40px;
-  width: 300px;
+  width: 340px;
   border-radius: 5px;
   border: 1px solid lightgrey;
   margin-top: 6px;
   margin-bottom: 6px;
   padding-left: 20px;
+}
+.select {
+  margin: 10px 6px;
+  font-size: inherit;
+  height: 40px;
+  width: 120px;
+}
+.option {
+  font-size: inherit;
+}
+.form {
+  padding-top:10px;
+  padding-bottom: 10px;
 }
 .btn-container {
   width: 100%;
@@ -83,6 +96,7 @@ input {
   padding-bottom: 10px;
   text-align: center;
 }
+
 .btnSignup {
   background-color: rgb(59, 89, 153);
   color: white;

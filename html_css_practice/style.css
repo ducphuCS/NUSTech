@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 2px 0px 0px 0px;
   font-family: Helvetica, sans-serif;
 }
 .page-title {
-  font-weight: bold;
   color: rgb(53, 84, 144);
   text-align: center;
   margin-top: 100px;
@@ -24,9 +23,9 @@ li {
   float: left;
   color: inherit;
 }
-li button {
+li button, input{
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 li button:hover {
   background-color: rgb(50, 80, 140);
@@ -35,7 +34,6 @@ li button:hover {
   background-color: inherit;
   color: inherit;
   font-size: 20px;
-  font-weight: bold;
   padding: 10px;
   margin: 0px 10px 0px 110px;
 }
@@ -48,37 +46,41 @@ li button:hover {
   background-color: inherit;
   color: inherit;
   font-size: 16px;
-  font-weight: bold;
-  margin-right: 80px;
+  margin-right: 120px;
   padding: 10px;
 }
 /* sign up content */
 .container {
   margin: auto;
-  padding-top: 4px;
+  margin-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 12px;
   background-color: rgb(249, 249, 249);
-  width: 460px;
+  width: 500px;
   height: 100%;
   border-radius: 20px ;
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .content {
   padding-top: 20px;
-  padding-left: 50px;
+  padding-left: 80px;
   font-size: 16px
+}
+.big-label {
+  font-weight: bold;
 }
 .input-text {
   font-size: inherit;
   height:40px;
-  width: 340px;
+  width: 320px;
   border-radius: 5px;
   border: 1px solid lightgrey;
   margin-top: 6px;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
   padding-left: 20px;
 }
 .select {
-  margin: 10px 6px;
+  margin: 12px 6px;
   font-size: inherit;
   height: 40px;
   width: 120px;
@@ -89,6 +91,7 @@ li button:hover {
 .form {
   padding-top:10px;
   padding-bottom: 10px;
+  margin-bottom: 12px;
 }
 .btn-container {
   width: 100%;
@@ -103,7 +106,7 @@ li button:hover {
   text-align: center;
   border: none;
   border-radius: 5px;
-  width: 100px;
+  width: 140px;
   height: 50px;
   font-size:18px;
 }

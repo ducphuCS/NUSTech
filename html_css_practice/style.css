@@ -51,56 +51,42 @@ li button:hover {
   padding: 10px;
 }
 /* sign up content */
-.container {
+#container {
   margin: auto;
   margin-bottom: 80px;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 12px;
+  line-height: 26px;
   background-color: rgb(249, 249, 249);
   width: 500px;
   height: 100%;
   border-radius: 20px ;
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
-.content {
-  padding-top: 20px;
-  padding-left: 80px;
-  font-size: 16px
+#content p:not(#btn-container){
+  padding-left: 60px;
 }
-.big-label {
+.big-label:not(.error) {
   font-weight: bold;
+}
+label.error {
+  display: none;
+  color: red;
 }
 .input-text {
   font-size: inherit;
   height:40px;
-  width: 320px;
+  width: 350px;
   border-radius: 5px;
   border: 1px solid lightgrey;
-  margin-top: 6px;
-  margin-bottom: 16px;
   padding-left: 20px;
 }
 .select {
-  margin: 12px 6px;
-  font-size: inherit;
-  height: 40px;
-  width: 120px;
-}
-.option {
   font-size: inherit;
 }
-.form {
-  padding-top:10px;
-  padding-bottom: 10px;
-  margin-bottom: 12px;
-}
-.btn-container {
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+#btn-container {
   text-align: center;
 }
-
 .btnSignup {
   background-color: rgb(59, 89, 153);
   color: white;

@@ -1,0 +1,16 @@
+.picture {
+  height: 200px;
+  width: auto;
+}
+#click {
+  height: 50px;
+}
+#button-container {
+  float:right;
+  text-align: right;
+  width:500px;
+}
+#chat-are {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="vi" dir="ltr">
+<html lang="vi">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Fotobook</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="signup-form.js"></script>
   </head>
   <body>
     <ul class="nav-bar">
@@ -12,41 +15,55 @@
       <li style="float:right"><button type="button" class="btnLogin">Login</button></li>
     </ul>
     <p class="page-title">Fotobook Signup</p>
-    <div class="container">
-      <div class="content">
-      <label class="big-label" for="fname">First Name</label><br>
-      <input type="text" class="input-text" id="fname" name="fname" placeholder="First Name"><br>
-      <label class="big-label" for="lname">Last Name</label><br>
-      <input type="text" class="input-text" id="lname" name="lname" placeholder="Last Name"><br>
-      <label class="big-label" for="country">Country</label>
-      <select class="select" name="country" id="country">
-        <option class="option" value="vi">Việt Nam</option>
-        <option class="option" value="en">England</option>
-      </select><br>
-      <label class="big-label" for="gender">Gender</label><br>
-      <form class="form">
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-      </form>
-      <label class="big-label" for="topic">Topic</label>
-      <form class="form">
-        <input type="checkbox" id="fashion" name="topic" value="fashion">
+    <form id="container" method="get" action="" novalidate="novalidate">
+    <div id="content">
+      <p>
+        <label class="big-label" for="fname">First Name</label><br>
+        <input type="text" class="input-text" id="fname" name="fname" placeholder="First Name"/><br>
+      </p>
+      <p>
+        <label class="big-label" for="lname">Last Name</label><br>
+        <input type="text" class="input-text" id="lname" name="lname" placeholder="Last Name"/><br>
+      </p>
+      <p>
+        <label class="big-label" for="country">Country</label>
+        <select class="select" name="country" id="country">
+          <option class="option" value="vi">Việt Nam</option>
+          <option class="option" value="en">England</option>
+        </select>
+      </p>
+      <p>
+        <label class="big-label" for="gender">Gender</label><br>
+        <form name="gender">
+          <input type="radio" id="male" name="gender" value="male"/>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female"/>
+          <label for="female">Female</label><br>
+        </form>
+      </p>
+      <p>
+        <label class="big-label" for="topic">Topic</label><br>
+        <input type="checkbox" id="fashion" name="topic" value="fashion"/>
         <label for="fashion">Fashion</label>
-        <input type="checkbox" id="news" name="topic" value="news">
+        <input type="checkbox" id="news" name="topic" value="news"/>
         <label for="news">News</label>
-        <input type="checkbox" id="sport" name="topic" value="sport">
-        <label for="sport">Sport</label>
-      </form>
-      <label class="big-label" for="newpass">New Password</label><br>
-      <input type="password" class="input-text" id="newpass" name="newpass" placeholder="Password"><br>
-      <label class="big-label" or="confirmpass">Password Confirmation</label><br>
-      <input type="password" class="input-text" id="confirmpass" name="confirmpass" placeholder="Password"><br>
-      </div>
-      <div class="btn-container">
-        <button type="submit" id="signup" class="btnSignup">Signup</button>
-      </div>
+        <input type="checkbox" id="sport" name="topic" value="sport"/>
+        <label for="sport">Sport</label><br>
+      </p>
+      <p>
+        <label class="big-label" for="newpass">New Password</label><br>
+        <input type="password" class="input-text" id="newpass" name="newpass" placeholder="Password"/><br>
+        <label for="newpass" class="error"></label>
+      </p>
+      <p>
+        <label class="big-label" or="confirmpass">Password Confirmation</label><br>
+        <input type="password" class="input-text" id="confirmpass" name="confirmpass" placeholder="Password"/><br>
+        <label for="confirmpass" class="error"></label>
+      </p>
+      <p id="btn-container">
+        <input type="submit" id="signup" class="btnSignup" value="Signup"/>
+      </p>
     </div>
+    </form>
   </body>
 </html>

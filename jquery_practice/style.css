@@ -8,9 +8,31 @@
 #button-container {
   float:right;
   text-align: right;
-  width:500px;
+  width:300px;
 }
-#chat-are {
+#button-container button {
+  border: none;
+  border-radius: 5px;
+  background-color: lightgrey;
+  font-size: 16px;
+  width: 100px;
+}
+#chat-area {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
+}
+#table, #table td, #table th {
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#table td, #table th {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+}
+.chosen {
+  background-color: darkblue;
+  color: white;
 }

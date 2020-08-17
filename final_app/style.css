@@ -1,11 +1,5 @@
-.font {
-  font-family: Verdana, sans-serif;
-}
 .bg {
   background-color: rgb(60, 90, 154);
-}
-.text-color {
-  color: rgb(60, 90, 154);
 }
 .bg-grey {
   background-color: rgb(248, 248, 248);
@@ -16,7 +10,29 @@
 .btn, .btn:hover {
   color: rgb(60, 90, 154);
 }
-.btn.chosen {
+.chosen {
   background-color: rgb(60, 90, 154);
   color: white;
+}
+.following{
+  color: white;
+  background-color: rgb(231, 97, 94);
+}
+.following:hover {
+  color: white;
+}
+.font {
+  font-family: Verdana, sans-serif;
+}
+.font-size {
+  font-size: 12px;
+}
+.font-size-sm {
+  font-size: 8px;
+}
+.text-color {
+  color: rgb(60, 90, 154);
+}
+.text-grey {
+  color: rgb(248, 248, 248);
 }

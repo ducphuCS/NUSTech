@@ -17,4 +17,15 @@ $(document).ready(function() {
       }
     }
   })
+  $(".love").on({
+    "click": function() {
+      var icon = $(this).children("svg");
+      var fill_color = icon.attr("fill");
+      if (fill_color == "rgb(60, 90, 154)")
+        $(icon).attr("fill","lightgrey");
+      else {
+        $(icon).attr("fill", "rgb(60, 90, 154)");
+      }
+    }
+  })
 });

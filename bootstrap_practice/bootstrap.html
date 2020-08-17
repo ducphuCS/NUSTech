@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+    <title>Bootstap Testing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="style.css" type="text/css"></link>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          One of three columns col-sm
+        </div>
+        <div class="col-sm">
+          One of three columns col-sm
+        </div>
+        <div class="col-sm">
+          One of three columns ci
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-5">
+          One of three columns col-5
+        </div>
+        <div class="col-4">
+          One of three columns col-4
+        </div>
+        <div class="col-xl" id="29">
+          One of three columns xl
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-2">
+          1 of 3
+        </div>
+        <div class="col-md-auto">
+          Variable width content
+        </div>
+        <div class="col col-lg-2">
+          3 of 3
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col align-self-start">
+          One of three columns
+        </div>
+      </div>
+      <div class="row">
+        <div class="col align-self-center">
+          One of three columns
+        </div>
+      </div>
+      <div class="row">
+        <div class="col align-self-end">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <script>
+      var value = false;
+      $.ajax({
+        complete: function() {
+          value = true;
+        }
+      })
+      console.log(value);
+    </script>
+  </body>
+</html>

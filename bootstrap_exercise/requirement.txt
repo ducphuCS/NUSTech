@@ -1,0 +1,7 @@
+1. Làm giống design
+
+2. Dùng boostrap để làm, ưu tiên sử dụng những gì boostrap đã support sẵn, hạn chế tối đa việc viết thêm CSS.
+
+3. Chỗ cái link "Continue reading" của mấy bài post khi click vào thì hiển thị modal show ra nội dung bài post (nội dung place holder muốn bỏ gì vào thì bỏ). Cần chú ý việc show lên modal anh muốn các bạn dùng Jquery bind sự kiện lên cái link "Continue reading" để show ra modal khi click chứ ko làm theo convention của Boostrap (nếu làm đúng thì ko cần viết code JS gì hết, cái anh muốn là các bạn tập viết thêm JS).
+
+4. Bài nộp gồm 1 file HTML + 1 file CSS (nếu các bạn cần define thêm CSS) + 1 file JS.

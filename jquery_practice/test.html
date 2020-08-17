@@ -16,7 +16,8 @@
       <input type="text" name="text"/>
       <button class="submit" type="button">Send</button>
       <button class="submit" type="button">Clear</button>
-      <textarea id="chat-area" rows="10" cols="50"></textarea>
+      <textarea id="chat-area" rows="4" cols="50" readonly></textarea><br>
+      <span class="chat-area"></span>
     </div>
     <div>
       <button class="slide-btn">Slideup</button>
@@ -31,6 +32,11 @@
         <input type="text" name="new-row" placeholder="Name" id="name"/>
         <input type="text" name="new-row" placeholder="Birth Year" id="birth-year"/>
         <button type="button" name="new-row">Create</button>
+        <label for="color-selector">Select color: </label>
+        <select name="color-selector" class="selector">
+          <option value="default" selected="selected">Default</option>
+          <option value="lightgrey">lightgrey</option>
+        </select>
       </div>
       <table id="table">
         <tr>

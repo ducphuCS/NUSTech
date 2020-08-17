@@ -20,6 +20,7 @@
 #chat-area {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
+  width: 500px;
 }
 #table, #table td, #table th {
   font-size: 14px;
@@ -35,4 +36,10 @@
 .chosen {
   background-color: darkblue;
   color: white;
+}
+.chat-area {
+  display: block;
+  height: 200px;
+  width: 500px;
+  overflow: auto;
 }

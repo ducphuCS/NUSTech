@@ -1,0 +1,37 @@
+/* page */
+#page {
+  width: 80%;
+}
+/* font */
+.font {
+  font-family: Garamond, serif;
+}
+/* title bar */
+#title-bar {
+  height: 60px;
+}
+#title {
+  font-size: 30px;
+}
+/* navigation bar */
+#nav-bar {
+  height: 45px;
+}
+/* feature */
+div#feature {
+  background-color: rgb(52, 58, 64);
+}
+#feature-title {
+  font-size: 40px;
+}
+#feature button {
+  background-color: inherit;
+  border-color: rgb(52, 58, 64);
+}
+/* sub-feature */
+.thumbnail {
+  background-color: rgb(85, 89, 92);
+}
+#sub-feature .sub-feature .title {
+  font-size: 26px;
+}

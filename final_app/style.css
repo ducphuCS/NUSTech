@@ -2,7 +2,7 @@
   background-color: rgb(60, 90, 154);
 }
 .bg-grey {
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(249, 249, 249);
 }
 .btn:focus {
   box-shadow: none;
@@ -12,6 +12,9 @@
 }
 .chosen {
   background-color: rgb(60, 90, 154);
+  color: white;
+}
+.chosen:hover {
   color: white;
 }
 .following{

@@ -21,10 +21,13 @@ $(document).ready(function() {
     "click": function() {
       var icon = $(this).children("svg");
       var fill_color = icon.attr("fill");
-      if (fill_color == "rgb(60, 90, 154)")
+      if (fill_color == "rgb(60, 90, 154)"){
         $(icon).attr("fill","lightgrey");
+        $(this).children("span").text(parseInt($(this).children("span").text()) - 1);
+      }
       else {
         $(icon).attr("fill", "rgb(60, 90, 154)");
+        $(this).children("span").text(parseInt($(this).children("span").text()) + 1);
       }
     }
   })
@@ -42,8 +45,34 @@ $(document).ready(function() {
       else {
         $("#modal-album-title").html(title)
         $("#modal-album-description").html(description)
+        // this is for source of picture in album
         $("#modal-album").modal("toggle")
       }
+    }
+  })
+  $("button[name='follow']").on({
+    "click": function() {
+      if ($(this).hasClass("followed")) {
+        $(this).removeClass("followed")
+        $(this).addClass("follow")
+        $(this).html("follow")
+      }
+      else {
+        $(this).removeClass("follow")
+        $(this).addClass("followed")
+        $(this).html("following")
+      }
+    }
+  })
+  $(".tab").on({
+    "click": function() {
+      var others = $(".tab").not(this);
+      $(this).removeClass("text-secondary");
+      $(this).addClass("text-color");
+      others.map(function() {
+        $(this).removeClass("text-color");
+        $(this).addClass("text-secondary");
+      })
     }
   })
 });

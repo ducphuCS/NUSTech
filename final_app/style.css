@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 .bg {
   background-color: rgb(60, 90, 154);
 }
@@ -17,15 +19,29 @@
 .chosen:hover {
   color: white;
 }
-.following{
+/* Following button */
+.followed{
   color: white;
   background-color: rgb(231, 97, 94);
 }
-.following:hover {
+.followed:hover {
   color: white;
 }
+.follow {
+  color:  rgb(231, 97, 94);
+  background-color: white;
+  border-color: rgb(231, 97, 94);
+  border-width: 2px;
+}
+.follow:hover {
+  color: rgb(231, 97, 94);
+}
+/* */
 .font {
-  font-family: Verdana, sans-serif;
+  font-family: Roboto, sans-serif;
+}
+.font-size-lg {
+  font-size: 24px
 }
 .font-size {
   font-size: 12px;

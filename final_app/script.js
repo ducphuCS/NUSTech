@@ -28,4 +28,22 @@ $(document).ready(function() {
       }
     }
   })
+  $("img").on({
+    "click": function() {
+      var title = $(this).parent().parent().find("div[name='title-post']").html();
+      var source = $(this).attr("src");
+      var description = $(this).parent().parent().find("div[name='description-post']").html()
+      if ($("#btn-photo").hasClass("chosen")) {
+        $("#modal-photo-title").html(title);
+        $("#modal-photo-body").attr("src", source)
+        $("#modal-photo-description").html(description);
+        $("#modal-photo").modal("toggle");
+      }
+      else {
+        $("#modal-album-title").html(title)
+        $("#modal-album-description").html(description)
+        $("#modal-album").modal("toggle")
+      }
+    }
+  })
 });

@@ -8,7 +8,14 @@ class User < ApplicationRecord
   end
   with_options if: :admin? do |admin|
     admin.validates :password, length: {minimum: 10}
+    # validate :password_contain_lower_upper_digit
   end
+
+  # def password_contain_lower_upper_digit
+  #
+  # end
+
+
   after_touch :log_when_photos_or_users_touched
   private
     def log_when_photos_or_users_touched

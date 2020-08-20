@@ -20,8 +20,8 @@
         </div>
         <div class="row col-6 justify-content-end align-items-center m-0 pl-0">
           <div class="col-4 row">
-            <button class="rounded-circle bg-white text-color border-0 ">DP</button>
-            <button class="btn text-white border-0">Duc Phu</button>
+            <a class="btn rounded-circle bg-white text-color border-0 px-2" href="my_profile.html">DP</a>
+            <a class="btn text-white border-0" href="my_profile.html">Duc Phu</a>
           </div>
           <div class="col-3">
             <button class="btn text-white border-0">Logout</button>
@@ -39,9 +39,7 @@
         </div>
         <div class="col-9 p-3">
           <div class="col bg-white pb-3 mb-5">
-            <div class="font-weight-bold border-bottom py-4" style="font-size:20px;">
-              New Photo
-            </div>
+            <div class="font-weight-bold border-bottom py-4" style="font-size:20px;">New Photo</div>
             <div class="row">
               <div class="col px-4">
                 <div class="form-group-vertical mt-4">
@@ -49,8 +47,8 @@
                   <input type="text" name="title" placeholder="Photo Title" class="form-control col-11">
                 </div>
                 <div class="form-group-vertical my-4">
-                  <label for="sharing">Sharing mode</label>
-                  <select class="form-control col-5" name="sharing">
+                  <label for="sharing">Sharing mode</label><br>
+                  <select class="col-5 custom-select" name="sharing">
                     <option value="public" selected>Public</option>
                     <option value="private">Private</option>
                   </select>
@@ -61,6 +59,12 @@
                   <label for="description">Description</label>
                   <textarea name="description" rows="5" cols="80" placeholder="Photo Description" class="form-control"></textarea>
                 </div>
+              </div>
+            </div>
+            <div class="row mx-2">
+              <div class="form-group-vertical bg-grey rounded add-photo" style="height:200px; width:200px">
+                <label for="new_photo"></label>
+                <input type="file" name="new-photo" class="" style="opacity:0;height:200px;width:200px"/>
               </div>
             </div>
           </div>

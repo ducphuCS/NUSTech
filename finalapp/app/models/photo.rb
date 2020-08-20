@@ -1,7 +1,4 @@
 class Photo < ApplicationRecord
   validates :title, presence: true
-  belongs_to :users, touch: true
-  after_touch do
-    puts 'An Photo was touched'
-  end
+  belongs_to :user, optional: true, counter_cache: :photo_count
 end

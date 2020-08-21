@@ -1,6 +1,11 @@
 class Album < ApplicationRecord
   validates :title, presence: true
   belongs_to :user, optional: true, counter_cache: :album_count
+  has_and_belongs_to_many :photos
+  scope :sharing_mode, ->(public) {
+    where(public: public)
+  }
+
   before_save :ensure_description_has_a_value
   private
   def ensure_description_has_a_value

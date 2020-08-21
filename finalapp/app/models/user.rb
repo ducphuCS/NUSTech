@@ -11,4 +11,5 @@ class User < ApplicationRecord
     admin.validates :password, length: {minimum: 10}
   end
 
+  scope :admin, -> {where(admin: true)}
 end

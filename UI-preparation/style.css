@@ -84,6 +84,16 @@
   bottom: 0px;
   right: 0px;
 }
+.edit-admin {
+  opacity: 0.5;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .lock {
   position: absolute;
   top: 0px;

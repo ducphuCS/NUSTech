@@ -51,6 +51,13 @@
 .add:hover {
   color: white;
 }
+.delete {
+  color: white;
+  background-color: rgb(240, 87, 83);
+}
+.delete:hover {
+  color: white;
+}
 /* */
 .font {
   font-family: Roboto, sans-serif;

@@ -84,6 +84,12 @@
   bottom: 0px;
   right: 0px;
 }
+.change {
+  opacity: 0.8;
+  position: absolute;
+  bottom: 5px;
+  width: 60%;
+}
 .edit-admin {
   opacity: 0.5;
   background-color: black;

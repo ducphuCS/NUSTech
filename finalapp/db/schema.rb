@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_070417) do
+ActiveRecord::Schema.define(version: 2020_08_24_082517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_24_070417) do
     t.integer "photo_count", default: 0
     t.integer "album_count", default: 0
     t.datetime "last_login"
+    t.boolean "active", default: true
   end
 
   add_foreign_key "albums", "users"

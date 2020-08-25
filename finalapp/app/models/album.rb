@@ -2,6 +2,8 @@ class Album < ApplicationRecord
   validates :title, presence: true
   belongs_to :user, optional: true, counter_cache: :album_count
   has_and_belongs_to_many :photos
+  has_many :likes, as: :content
+
   scope :sharing_mode, ->(public) {
     where(public: public)
   }

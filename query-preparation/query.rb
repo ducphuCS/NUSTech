@@ -8,6 +8,18 @@ Photo.where(public: true, user_id: @user.followees).order(created_at: :desc)
 
 Album.where(public: true, user_id: @user.followees).order(created_at: :desc)
 
+# Show number  of likes
+
+@content.likes.size
+
+# whether currrent user liked
+
+@content.likes.pluck(:user_id).include?(@user.id)   #return false or true
+
+# user like
+
+Like.create(content_type: @content_type, content_id: @content, user_id: @user)
+
 ############################# Discover ######################
 
 # Get public photo whose sharing mode is set public, in reverse chronological order (from newest to oldest)
@@ -20,11 +32,11 @@ Album.where(public: true).order(created_at: :desc)
 
 # Follow user
 
-@user.followees << @new_followees
+@user.followee_ids << @photo.user_id
 
 # Unfollow @followee
 
-@user.followees.delete(@followee)
+@user.followee_ids.delete(@photo.user_id)
 
 ########################## Public Profile  ####################
 

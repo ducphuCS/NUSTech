@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :photos
   has_many :albums
+  has_many :likes
 
   has_many :follower_relationships, class_name: "Follow", foreign_key: :followee_id
   has_many :followers, through: :follower_relationships, source: :follower  #@user.followers is list of users that follow this user

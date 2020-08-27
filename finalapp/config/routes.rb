@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root "home#index"
+  get '/login', to: "home#login"
+  get '/discover', to: "home#discover"
+  resources :users, except: [:index, :destroy] do
+    member do
+      get 'feed', to: "users#feed"
+    end
+    resources :photos, shallow: true, except: :show
+    resources :albums, shallow: true, except: :show
+  end
+  namespace :admin do
+    resources :albums, except: [:new, :create, :show]
+    resources :photos, except: [:new, :create, :show]
+    resources :users, except: [:new, :create, :show]
+  end
+  # resources :albums
+  # resources :photos
 end

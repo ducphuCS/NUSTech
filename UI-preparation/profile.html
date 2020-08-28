@@ -10,7 +10,7 @@
   <body>
     <div class="container-fluid font">
       <div class="row bg justify-content-between" name="home-bar" style="height:40px;">
-        <div class="row col-6 align-items-center h-100 m-0 pr-0">
+        <div class="row col-sm-6 col-8 align-items-center h-100 m-0 pr-0">
           <div class="col-4 pr-0 ml-3">
             <a class="navbar-brand float-right text-white" href="#">Fotobook</a>
           </div>
@@ -18,15 +18,22 @@
             <input class="col h-100 rounded border-0" type="text" name="search-bar" placeholder="Search Photo / Album"/>
           </div>
         </div>
-        <div class="row col-6 justify-content-end align-items-center m-0 pl-0">
-          <div class="col-4 row">
-            <button class="rounded-circle bg-white text-color border-0 ">DP</button>
-            <button class="btn text-white border-0">Duc Phu</button>
+        <nav class="navbar navbar-expand-sm row col-sm-6 col-4 m-0 p-0 justify-content-end">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#user-bar" aria-controls="user-bar" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="#" class="nav-toggle-icon btn rounded-circle bg-white text-color border-0 px-2">DP</a>
+          </button>
+          <div class="collapse navbar-collapse" id="user-bar" style="z-index: 100">
+            <div class="navbar-nav col-12 justify-content-end align-items-center bg">
+              <div class="col-3 row navbar-nav">
+                <a href="my_profile.html" class="nav-item nav-link btn rounded-circle bg-white text-color border-0 px-2">DP</a>
+                <a href="my_profile.html" class="nav-item nav-link btn text-white border-0">Duc Phu</a>
+              </div>
+              <div class="col-3 navbar-nav">
+                <button class="nav-item nav-link btn text-white border-0">Logout</button>
+              </div>
+            </div>
           </div>
-          <div class="col-3">
-            <button class="btn text-white border-0">Logout</button>
-          </div>
-        </div>
+        </nav>
       </div>
       <div class="row bg-grey">
         <div class="col pt-4 align-items-center">
@@ -37,13 +44,13 @@
             <a class="btn text-secondary" href="discovery.html">Discover</a>
           </div>
         </div>
-        <div class="col-9 p-3">
+        <div class="col-sm-9 col-12 p-3">
           <div class="col bg-white">
             <div class="col row py-5 px-4" name="profile-header">
-              <div class="col-3">
+              <div class="col-sm-3 col-12">
                 <img src="img/doggo.jpeg" alt="avatar" class="img-fluid rounded-circle"/>
               </div>
-              <div class="col-9">
+              <div class="col-sm-9 col-12">
                 <div class="row" style="height:40px;">
                   <button class="btn followed rounded-pill btn-sm" type="button" name="follow" style="height:30px">following</button>
                 </div>
@@ -69,38 +76,38 @@
             <div class="" name="photos-tab">
               <!-- model for row -->
               <div class="row mx-3 my-1">
-                <div class="col px-3  text-center">
+                <div class="col-sm col-6 px-3  text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
-                <div class="col px-3  text-center">
+                <div class="col-sm col-6 px-3  text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
-                <div class="col px-3 text-center">
+                <div class="col-sm col-6 px-3 text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
-                <div class="col px-3 text-center">
+                <div class="col-sm col-6 px-3 text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
               </div>
               <!--  -->
               <div class="row mx-3 my-1">
-                <div class="col px-3 text-center">
+                <div class="col-sm col-6 px-3 text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
-                <div class="col px-3 text-center">
+                <div class="col-sm col-6 px-3 text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
-                <div class="col px-3 text-center">
+                <div class="col-sm col-6 px-3 text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
-                <div class="col px-3 text-center">
+                <div class="col-sm col-6 px-3 text-center">
                   <img src="img/doggo.jpeg" alt="" class="img-fluid rounded">
                   <p name="photo-tilte" class="font-size">Photo title goes here</p>
                 </div>
@@ -109,7 +116,7 @@
             <div class="d-none" name="albums-tab">
               <!-- model for album row -->
               <div class="row my-1">
-                <div class="col-3 thumb album-thumb border-0">
+                <div class="col-sm-3 col-6 thumb album-thumb border-0">
                   <div class="thumb-container justify-content-center row">
                     <div class="images-container">
                       <img src="img/doggo.jpeg" alt="" class="thumb-image img-fluid">
@@ -131,7 +138,7 @@
                     <p name="album title" class="font-size">Album title goes here</p>
                   </div>
                 </div>
-                <div class="col-3 thumb album-thumb border-0">
+                <div class="col-sm-3 col-6 thumb album-thumb border-0">
                   <div class="thumb-container justify-content-center row">
                     <div class="images-container ">
                       <img src="img/doggo.jpeg" alt="" class="thumb-image img-fluid">
@@ -153,7 +160,7 @@
                     <p name="album title" class="font-size">Album title goes here</p>
                   </div>
                 </div>
-                <div class="col-3 thumb album-thumb border-0">
+                <div class="col-sm-3 col-6 thumb album-thumb border-0">
                   <div class="thumb-container justify-content-center row">
                     <div class="images-container">
                       <img src="img/doggo.jpeg" alt="" class="thumb-image img-fluid">
@@ -175,7 +182,7 @@
                     <p name="album title" class="font-size">Album title goes here</p>
                   </div>
                 </div>
-                <div class="col-3 thumb album-thumb border-0">
+                <div class="col-sm-3 col-6 thumb album-thumb border-0">
                   <div class="thumb-container justify-content-center row">
                     <div class="images-container">
                       <img src="img/doggo.jpeg" alt="" class="thumb-image img-fluid">

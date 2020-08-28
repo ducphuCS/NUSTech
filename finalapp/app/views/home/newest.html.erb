@@ -1,0 +1,4 @@
+<h1>Titles of 4 lastest albums</h1>
+<% @albums.each do |album| %>
+  Album <%= album.id%> has title <b><%= album.title%></b><br>
+<% end %>

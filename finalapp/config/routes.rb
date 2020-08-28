@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "home#index"
-  get '/login', to: "home#login"
+  get 'newest', to: "home#newest"
   get '/discover', to: "home#discover"
   resources :users, except: [:index, :destroy] do
     member do

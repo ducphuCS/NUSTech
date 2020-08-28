@@ -2,3 +2,17 @@
 <% @albums.each do |album| %>
   Album <%= album.id%> has title <b><%= album.title%></b><br>
 <% end %>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Title</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @albums.each do |album| %>
+      <%= render partial: "row", locals: {album: album} %>
+    <% end %>
+  </tbody>
+</table> -->

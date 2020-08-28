@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get 'feed', to: "users#feed"
     end
     resources :photos, shallow: true, except: :show
-    resources :albums, shallow: true, except: :show
+    resources :albums, shallow: true
   end
   namespace :admin do
     resources :albums, except: [:new, :create, :show]

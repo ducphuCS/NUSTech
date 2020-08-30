@@ -1,18 +1,12 @@
-<h1>Titles of 4 lastest albums</h1>
-<% @albums.each do |album| %>
-  Album <%= album.id%> has title <b><%= album.title%></b><br>
-<% end %>
+<h1>4 lastest albums</h1>
 
-<!-- <table>
-  <thead>
-    <tr>
-      <td>Id</td>
-      <td>Title</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @albums.each do |album| %>
-      <%= render partial: "row", locals: {album: album} %>
-    <% end %>
-  </tbody>
-</table> -->
+<div class="row">
+  <div class="col-12 col-sm-6">
+    <%= @albums[0].title%><br>
+    <%= @albums[1].title%>
+  </div>
+  <div class="col-12 col-sm-6">
+    <%= @albums[2].title%><br>
+    <%= @albums[3].title%>
+  </div>
+</div>

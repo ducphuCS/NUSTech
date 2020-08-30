@@ -1,4 +1,8 @@
-<%= form_for @album do |f| %>
+
+<%= form_for @album, id: "form" do |f| %>
   <%= f.text_field(:title, value: "")%>
   <%= submit_tag("Edit") %>
 <% end %>
+<br>
+
+<%= javascript_pack_tag 'validation.js' %>

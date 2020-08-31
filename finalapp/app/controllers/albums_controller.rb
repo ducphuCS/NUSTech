@@ -4,17 +4,16 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
   end
   def update
-    # value = params.permit(album: {:title })
-    # value = params.require(:album).permit(:title)[:title]
-    # @album = Album.find(params[:id])
-    # @album.update(title: value)
     value = params.require(:album).permit(:title)[:title]
-    if value.size >= 10
-      Album.find(params[:id]).update(title: value);
-      redirect_to action: :show
+    @album = Album.find(params[:id])
+    @album.title = value
+    if @album.update(title: value)
+      flash[:title_change_error] = nil
+      render "show"
     else
-      flash.now[:title_change_error] = true
-      render :error
+      flash[:title_change_error] = @album.errors.messages[:title][0]
+      # render :edit
+      redirect_to action: :edit
     end
   end
   def show

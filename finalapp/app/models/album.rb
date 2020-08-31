@@ -1,5 +1,5 @@
 class Album < ApplicationRecord
-  validates :title, presence: true
+  validates :title, presence: true, length: {minimum: 10, message: "Album title should has more than 10 letters"}
   belongs_to :user, optional: true, counter_cache: :album_count
   has_and_belongs_to_many :photos
   has_many :likes, as: :content

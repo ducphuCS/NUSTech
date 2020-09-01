@@ -4,7 +4,7 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
   end
   def update
-    value = params.require(:album).permit(:title)[:title]
+    value = albums_title
     @album = Album.find(params[:id])
     @album.title = value
     if @album.update(title: value)
@@ -19,5 +19,10 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
     render "show"
+  end
+
+  private
+  def albums_title
+    params.require(:album).permit(:title)[:title]
   end
 end

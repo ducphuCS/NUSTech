@@ -20,10 +20,16 @@ class User < ApplicationRecord
     admin.validates :password, length: {minimum: 10}
   end
 
-  before_create :set_default_value_for_last_login
-  def set_default_value_for_last_login
-    self.last_login = self.created_at
+  before_save :send_welcome_mail
+
+  def send_welcome_mail
+    puts "before_save User"
+    UserMailer.with(user: self).welcome_mail.deliver_now
   end
+  # before_create :set_default_value_for_last_login
+  # def set_default_value_for_last_login
+  #   self.last_login = self.created_or_update
+  # end
 
   scope :admin, -> {where(admin: true)}
 end

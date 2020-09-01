@@ -7,4 +7,10 @@ class UsersController < ApplicationController
       UserMailer.welcome_mail(@user).deliver_now
     end
   end
+  def show
+
+  end
+  def feed
+
+  end
 end

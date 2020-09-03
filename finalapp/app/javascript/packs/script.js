@@ -50,6 +50,11 @@ $(document).ready(function() {
       }
     }
   })
+  $(".photo-modal-close").on( {
+    "click": function() {
+      $("#modal-photo").toggle();
+    }
+  })
   $("button[name='follow']").on({
     "click": function() {
       if ($(this).hasClass("followed")) {

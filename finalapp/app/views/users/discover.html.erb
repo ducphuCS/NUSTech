@@ -2,7 +2,7 @@
   <div class="row bg justify-content-between home-bar" name="home-bar">
     <div class="row col-sm-6 col-8 align-items-center h-100 m-0 pr-0">
       <div class="col-4 pr-0 ml-3">
-        <a class="navbar-brand float-right text-white" href="<%= discover_path %>" ><%= t ('.title') %></a>
+        <a class="navbar-brand float-right text-white" href="<%= discover_user_path %>" ><%= t ('.title') %></a>
       </div>
       <div class="col py-1 h-100 pr-0">
         <input class="col h-100 rounded border-0" type="text" name="search-bar" placeholder="Search Photo / Album"/>
@@ -31,7 +31,7 @@
         <a class="btn text-secondary" href="<%= feed_user_path(1)%>"><%=t ('feed') %></a>
       </div>
       <div class="row col ml-2">
-        <a class="btn text-color" href="<%=discover_path%>" ><%= t('discover')%></a>
+        <a class="btn text-color" href="<%=discover_user_path%>" ><%= t('discover')%></a>
       </div>
     </div>
     <div class="col-sm-9 col-12 p-3">

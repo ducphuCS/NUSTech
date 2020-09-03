@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root "home#index"
   get 'newest', to: "home#newest"
-  get '/discover', to: "home#discover"
+  # get '/discover', to: "home#discover"
   get '/login', to: "home#login"
   resources :users, except: [:index, :destroy] do
     member do
       get 'feed', to: "users#feed"
+      get 'discover', to: "users#discover"
     end
     resources :photos, shallow: true, except: :show
     resources :albums, shallow: true

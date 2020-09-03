@@ -40,13 +40,13 @@ $(document).ready(function() {
         $("#modal-photo-title").html(title);
         $("#modal-photo-body").attr("src", source)
         $("#modal-photo-description").html(description);
-        $("#modal-photo").modal("toggle");
+        $("#modal-photo").toggle();
       }
       else {
         $("#modal-album-title").html(title)
         $("#modal-album-description").html(description)
         // this is for source of picture in album
-        $("#modal-album").modal("toggle")
+        $("#modal-album").toggle();
       }
     }
   })

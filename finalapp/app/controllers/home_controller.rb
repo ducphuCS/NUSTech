@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   end
   def discover
     I18n.default_locale = :en
+    @content = Photo.includes(:user).order(updated_at: :desc)
   end
   def login
 

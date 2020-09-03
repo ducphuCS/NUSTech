@@ -33,6 +33,11 @@ en:
   home:
     discover:
       title: "Fotobook"
+      photo: "PHOTO"
+      album: "ALBUM"
   logout: "Logout"
   feed: "Feed"
   discover: "Discover"
+  time:
+    formats:
+      last_update: "%l:%M %P %d/%m/%Y"

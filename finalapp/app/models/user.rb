@@ -20,16 +20,43 @@ class User < ApplicationRecord
     admin.validates :password, length: {minimum: 10}
   end
 
-  before_save :send_welcome_mail
+  scope :admin, -> {where(admin: true)}
 
+  # send sign up mail
+  after_save :send_welcome_mail
+
+  def name
+    name = String.new("")
+    if self.firstname.present?
+      name = name + self.firstname + ' '
+    end
+    if self.lastname.present?
+      name = name + self.lastname
+    end
+    return name
+  end
+
+  def avatar_name
+    name = String.new("")
+    if self.firstname.present?
+      name += self.firstname[0]
+    end
+    if self.lastname.present?
+      name += self.lastname[0]
+    end
+    return name
+  end
+
+  private
   def send_welcome_mail
-    puts "before_save User"
-    UserMailer.with(user: self).welcome_mail.deliver_now
+    puts "after_save User"
+    # UserMailer.with(user: self).welcome_mail.deliver_now
+    SignUpMailerJob.perform_later self
   end
   # before_create :set_default_value_for_last_login
   # def set_default_value_for_last_login
   #   self.last_login = self.created_or_update
   # end
 
-  scope :admin, -> {where(admin: true)}
+
 end

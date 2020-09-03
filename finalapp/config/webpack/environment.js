@@ -8,7 +8,6 @@ environment.plugins.append('ProvidePlugin-jQuery',
     Popper: ['popper.js', 'default']
   })
 )
-
 environment.loaders.append("jquery", {
   test: require.resolve("jquery"),
   use: [

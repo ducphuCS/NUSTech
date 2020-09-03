@@ -8,11 +8,16 @@ class Album < ApplicationRecord
     where(public: public)
   }
 
-  before_save :ensure_description_has_a_value
+  before_save :ensure_description_has_a_value, :likes_count_not_nil
   private
   def ensure_description_has_a_value
     unless description.present?
       self.description = "This is album of user has id " + self.user_id.to_s
+    end
+  end
+  def likes_count_not_nil
+    if self.likes_count.nil?
+      self.likes_count = 0
     end
   end
 end

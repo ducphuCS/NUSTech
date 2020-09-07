@@ -10,42 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_064627) do
+ActiveRecord::Schema.define(version: 2020_09_06_133948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "albums", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.text "source"
-    t.boolean "public", default: true
-    t.bigint "user_id"
-  end
-
-  create_table "people", force: :cascade do |t|
-    t.string "name"
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "surname"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "photos", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.text "source"
-    t.boolean "public", default: true
-    t.bigint "user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email", limit: 500
-    t.string "firstname", limit: 25
-    t.string "lastname", limit: 25
-    t.string "password", limit: 64
-    t.boolean "admin", default: false
-  end
-
-  add_foreign_key "albums", "users"
-  add_foreign_key "photos", "users"
 end

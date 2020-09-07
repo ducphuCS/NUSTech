@@ -1,0 +1,86 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+<div class="container-fluid font">
+  <div class="row bg justify-content-between" name="home-bar" style="height:40px;">
+    <div class="row col-6 align-items-center h-100 m-0 pr-0">
+      <div class="col-4 pr-0 ml-3">
+        <a class="navbar-brand float-right text-white" href="#">Fotobook</a>
+      </div>
+      <div class="col py-1 h-100 pr-0">
+        <input class="col h-100 rounded border-0" type="text" name="search-bar" placeholder="Search Photo / Album"/>
+      </div>
+    </div>
+    <div class="row col-6 justify-content-end align-items-center m-0 pl-0">
+      <div class="col-3">
+        <button class="btn text-white border-0">Login</button>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="height:30px;">
+  </div>
+  <div class="row justify-content-center mt-5">
+    <div class="col-6">
+      <h2 class="text-center text-color">Fotobook Signup</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center my-4">
+    <div class="col-sm-3 col-8 row border rounded-lg py-2 justify-content-center" >
+      <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="img-fluid col-auto" />
+      <img src="https://img.icons8.com/color/48/000000/facebook-circled.png" class="img-fluid col-auto" />
+      <img src="https://img.icons8.com/color/48/000000/twitter-circled.png" class="img-fluid col-auto" />
+    </div>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-sm-4 col-8 row justify-content-center shadow border rounded bg-grey mb-5">
+      <form class="mt-5 col" action="#" method="post">
+        <div class="form-group mx-3" style="font-size: 16px;">
+          <label for="fname" class="font-weight-bold">First Name</label>
+          <input type="text" name="fname" placeholder="First Name" class="border rounded-lg form-control pl-3" style="height:50px" autofocus/>
+        </div>
+        <div class="form-group mx-3" style="font-size: 16px;">
+          <label for="lname" class="font-weight-bold">Last Name</label>
+          <input type="text" name="lname" placeholder="Last Name" class="border rounded-lg form-control pl-3" style="height:50px"/>
+        </div>
+        <div class="form-group mx-3" style="font-size: 16px;">
+          <label for="password" class="font-weight-bold">New Password</label>
+          <input type="text" name="password" placeholder="Password" class="border rounded-lg form-control pl-3" style="height:50px"/>
+        </div>
+        <div class="form-group mx-3" style="font-size: 16px;">
+          <label for="password-confirm" class="font-weight-bold">Password Confirmation</label>
+          <input type="text" name="password-confirm" placeholder="Password" class="border rounded-lg form-control pl-3" style="height:50px"/>
+        </div>
+        <div class="form-group row justify-content-center">
+          <button class="btn chosen col-4 rounded-lg" type="submit" name="button" style="height:50px;"> Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

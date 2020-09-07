@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  brand: "Fotobook"
   home:
   users:
     discover:
@@ -42,3 +43,22 @@ en:
   time:
     formats:
       last_update: "%l:%M %P %d/%m/%Y"
+  photos:
+    new:
+      header: "New Photo"
+      title: "Title"
+      public_mode: "Sharing mode"
+      public: "Public"
+      private: "Private"
+      description: "Description"
+      save: "Save"
+    edit:
+      header: "Edit Photo"
+      back: "Back"
+      title: "Title"
+      public_mode: "Sharing mode"
+      public: "Public"
+      private: "Private"
+      description: "Description"
+      save: "Save"
+      delete: "Delete"

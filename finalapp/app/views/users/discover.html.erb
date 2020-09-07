@@ -2,7 +2,7 @@
   <div class="row bg justify-content-between home-bar" name="home-bar">
     <div class="row col-sm-6 col-8 align-items-center h-100 m-0 pr-0">
       <div class="col-4 pr-0 ml-3">
-        <a class="navbar-brand float-right text-white" href="<%= discover_user_path %>" ><%= t ('.title') %></a>
+        <a class="navbar-brand float-right text-white" href="<%= discover_user_path(content: "photo", id: current_user.id) %>" ><%= t ('brand') %></a>
       </div>
       <div class="col py-1 h-100 pr-0">
         <input class="col h-100 rounded border-0" type="text" name="search-bar" placeholder="Search Photo / Album"/>
@@ -10,16 +10,16 @@
     </div>
     <nav class="navbar navbar-expand-sm row col-sm-6 col-4 m-0 p-0 justify-content-end">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#user-bar" aria-controls="user-bar" aria-expanded="false" aria-label="Toggle navigation">
-        <a class="nav-toggle-icon btn rounded-circle bg-white text-color border-0 px-2">DP</a>
+        <a class="nav-toggle-icon btn rounded-circle bg-white text-color border-0 px-2"><%= @user.avatar_name%></a>
       </button>
       <div class="collapse navbar-collapse" id="user-bar" style="z-index: 100">
         <div class="navbar-nav col-12 justify-content-end align-items-center bg">
-          <div class="col-3 row navbar-nav">
-            <a href="<%= user_path(1)%>" class="nav-item nav-link btn rounded-circle bg-white text-color border-0 px-2">DP</a>
-            <a href="<%= user_path(1)%>" class="nav-item nav-link btn text-white border-0">Duc Phu</a>
+          <div class="col-auto row navbar-nav">
+            <a href="<%= user_path(current_user.id)%>" class="nav-item nav-link btn rounded-circle bg-white text-color border-0 px-2"><%= @user.avatar_name%></a>
+            <a href="<%= user_path(current_user.id)%>" class="nav-item nav-link btn text-white border-0"><%= @user.name%></a>
           </div>
           <div class="col-3 navbar-nav">
-            <a class="nav-item nav-link btn text-white border-0" href="<%= login_path %>"><%= t ('logout') %></a>
+            <%= link_to t('logout'), destroy_user_session_path, {class: "nav-item nav-link btn text-white border-0", method: "delete"}%>
           </div>
         </div>
       </div>
@@ -28,25 +28,29 @@
   <div class="row bg-grey">
     <div class="col pt-4 align-items-center">
       <div class="row col ml-2">
-        <a class="btn text-secondary" href="<%= feed_user_path(1)%>"><%=t ('feed') %></a>
+        <%= link_to I18n.t('feed'), feed_user_path(current_user.id), {class: "btn text-secondary"}%>
       </div>
       <div class="row col ml-2">
-        <a class="btn text-color" href="<%=discover_user_path%>" ><%= t('discover')%></a>
+        <%= link_to I18n.t('discover'), discover_user_path(content: "photo", id: current_user.id), {class: "btn text-secondary"}%>
       </div>
     </div>
     <div class="col-sm-9 col-12 p-3">
       <div class="col bg-white">
         <div class="row justify-content-center">
           <div class="row m-3 btn-group">
-            <!-- <button class="btn rounded-left border chosen" id="btn-photo" type="submit" ><%= t ('.photo') %></button> -->
-            <%= button_to t('.photo'), {action: "discover", content: "photo"}, {class: "btn rounded-left border chosen", method: :get}%>
-            <%= button_to t('.album'), {action: "discover", content: "album"}, {class: "btn rounded-left border bg-white", method: :get}%>
-            <!-- <button class="btn rounded-right border bg-white" id="btn-album" type="submit"><%= t ('.album') %></button> -->
+            <%= link_to t('.photo'), discover_user_path(content: "photo", id: current_user.id), {class: "btn rounded-left border chosen", id: "btn-photo"}%>
+            <%= link_to t('.album'), discover_user_path(content: "album", id: current_user.id), {class: "btn rounded-left border bg-white", id: "btn-album"}%>
           </div>
         </div>
         <div class="row m-4 justify-content-between font-size">
-          <% @content.each do |content|%>
-            <%= render partial: "block", locals: {content: content}%>
+          <% if @content_type == "photo"%>
+            <% @content.each do |content|%>
+              <%= render partial: "block_photo", locals: {content: content, user: @user}%>
+            <% end %>
+          <% else %>
+            <% @content.each do |content| %>
+              <%= render partial: "block_album", locals: {content: content, user: @user} %>
+            <% end %>
           <% end %>
         </div>
         <div class="row bg-white mt-5 justify-content-center " style="height:50px">
@@ -78,7 +82,7 @@
   </div>
 </div>
   <!-- MODAL for ALBUM -->
-  <div id="modal-album" class="modal" tabindex="-1" role="dialog"">
+  <div id="modal-album" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header border-0">
@@ -114,3 +118,11 @@
       </div>
   </div>
 </div>
+<% if @content_type == "album"%>
+  <script>
+    $("#btn-photo").addClass("bg-white");
+    $("#btn-photo").removeClass("chosen");
+    $('#btn-album').addClass("chosen");
+    $('#btn-album').removeClass("bg-white");
+  </script>
+<% end %>

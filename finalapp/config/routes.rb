@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "home#index"
+  devise_for :users
+
+  root to: "users#discover"
   get 'newest', to: "home#newest"
   # get '/discover', to: "home#discover"
   get '/login', to: "home#login"
@@ -16,6 +18,4 @@ Rails.application.routes.draw do
     resources :photos, except: [:new, :create, :show]
     resources :users, except: [:new, :create, :show]
   end
-  # resources :albums
-  # resources :photos
 end

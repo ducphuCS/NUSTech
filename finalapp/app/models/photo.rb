@@ -4,6 +4,8 @@ class Photo < ApplicationRecord
   has_and_belongs_to_many :albums
   has_many :likes, as: :content
 
+  mount_uploader :image, PhotoUploader
+
   before_save :likes_count_not_nil
   private
   def likes_count_not_nil

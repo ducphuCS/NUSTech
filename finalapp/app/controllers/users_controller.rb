@@ -14,17 +14,28 @@ class UsersController < ApplicationController
 
   end
   def discover
-    I18n.default_locale = :en
-    content_type = get_content
-    if content_type == "photo"
+    @content_type = get_content
+    @user = User.find(get_user_id)
+    if @content_type == "photo"
       @content = Photo.includes(:user).order(updated_at: :desc)
     else
-      @content = Album.includes(:user).order(updated_at: :desc)
+      @content = Album.includes(:user, :photos).order(updated_at: :desc)
     end
   end
 
   private
   def get_content
-    params.require(:content)
+    if params[:content].present?
+      params.require(:content)
+    else
+      "photo"
+    end
+  end
+  def get_user_id
+    if params[:id].present?
+      params.require(:id)
+    else
+      current_user.id
+    end
   end
 end
